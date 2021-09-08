@@ -1,0 +1,23 @@
+<form action="./login" method="POST">
+    <div class="content">
+        <div class="title">Login</div>
+        <% if (errMsg != '') { %>
+            <div class="error"><%= errMsg %></div>
+        <% } %>
+        <% if (succMsg != '') { %>
+            <div class="succ"><%= succMsg %></div>
+        <% } %>
+        <% if (error != '') { %>
+            <div class="error"><%= error %></div>
+        <% } %>
+        <div class="row"><div class="left">Email</div><div class="right"><input type="email" name="email"></div></div>
+        <div class="row"><div class="left">Password</div><div class="right"><input type="password" name="password"></div></div>
+        <div class="row"><button class="submitBtn">Submit</button></div>
+        <div class="row-line"></div>
+        <div class="row"><a class="row-footer" href="./register">Register</a></div>
+    </div>
+</form>
+
+<script>
+    document.getElementsByName('email')[0].focus();
+</script>

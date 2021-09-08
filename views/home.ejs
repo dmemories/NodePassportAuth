@@ -1,0 +1,14 @@
+<form action="/user/logout" method="POST">
+<div class="content">
+    <div class="title">Welcome <%= user.email %></div>
+    <% if (errMsg != '') { %>
+        <div class="error"><%= errMsg %></div>
+    <% } %>
+    <% if (succMsg != '') { %>
+        <div class="succ"><%= succMsg %></div>
+    <% } %>
+    <div class="row"><button class="logoutBtn">Logout</button></div> 
+<!--     <div class="row-line"></div>
+    <div class="row"><a class="row-footer" href="/">Back</a></div> -->
+</div>
+</form>

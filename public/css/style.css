@@ -1,0 +1,81 @@
+body {
+    background-color: #000;
+}
+.content {
+    background-color:aliceblue;
+    width: 400px;
+    border-radius: 7px;
+    margin: auto;
+    margin-top: 20px;
+    overflow: hidden;
+}
+.content input[type=email], input[type=password] {
+    height: 22px;
+    width: 80%;
+}
+.title {
+    text-align: center;
+    font-size: 50px;
+    padding: 20px;
+}
+.row {
+    display: flex;
+    padding: 10px;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 5px;
+}
+.row .left {
+    width: 30%;
+    text-align: center;
+}
+.row .right {
+    width: 70%;
+    text-align: center;
+}
+.row-line {
+    margin-top: 10px;
+    border-top:solid 1px;
+    height: 10px;
+}
+.row-footer {
+    font-size: 17px;
+}
+.submitBtn {
+    width: 80px;
+    height: 30px;
+    border-radius: 4px;
+    background-color: rgb(223, 229, 247);
+    cursor: pointer;
+}
+.logoutBtn {
+    width: 80px;
+    height: 30px;
+    border-radius: 4px;
+    background-color: rgb(223, 41, 50);
+    cursor: pointer;
+}
+.error {
+    background-color: rgba(255, 0, 0, 0.7);
+    margin: auto;
+    width: 80%;
+    height: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #FFF;
+    border-radius: 4px;
+    margin-bottom: 10px;
+}
+.succ {
+    background-color: rgba(32, 224, 112, 0.7);
+    margin: auto;
+    width: 80%;
+    height: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #FFF;
+    border-radius: 4px;
+    margin-bottom: 10px;
+}
