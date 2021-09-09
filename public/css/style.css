@@ -47,6 +47,7 @@ body {
     border-radius: 4px;
     background-color: rgb(223, 229, 247);
     cursor: pointer;
+    margin-right: 50px;
 }
 .logoutBtn {
     width: 80px;
@@ -78,4 +79,16 @@ body {
     color: #FFF;
     border-radius: 4px;
     margin-bottom: 10px;
+}
+.loginDiv {
+    text-align: center;
+}
+.loginDiv button {
+    border: none;
+    background-color:transparent;
+    cursor: pointer;
+}
+.loginDiv img {
+    width: 250px;
+    height: 40px;
 }

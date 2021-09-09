@@ -1,22 +1,27 @@
-<form action="./login" method="POST">
-    <div class="content">
-        <div class="title">Login</div>
-        <% if (errMsg != '') { %>
-            <div class="error"><%= errMsg %></div>
-        <% } %>
-        <% if (succMsg != '') { %>
-            <div class="succ"><%= succMsg %></div>
-        <% } %>
-        <% if (error != '') { %>
-            <div class="error"><%= error %></div>
-        <% } %>
+<div class="content">
+    <div class="title">Passport Auth</div>
+    <% if (errMsg != '') { %>
+        <div class="error"><%= errMsg %></div>
+    <% } %>
+    <% if (succMsg != '') { %>
+        <div class="succ"><%= succMsg %></div>
+    <% } %>
+    <% if (error != '') { %>
+        <div class="error"><%= error %></div>
+    <% } %>
+    <form action="./login" method="POST">
         <div class="row"><div class="left">Email</div><div class="right"><input type="email" name="email"></div></div>
         <div class="row"><div class="left">Password</div><div class="right"><input type="password" name="password"></div></div>
-        <div class="row"><button class="submitBtn">Submit</button></div>
-        <div class="row-line"></div>
-        <div class="row"><a class="row-footer" href="./register">Register</a></div>
-    </div>
-</form>
+        <div class="row"><button class="submitBtn">Login</button><a class="row-footer" href="./register">Register</a></div>
+    </form>
+    <div class="row-line"></div>
+    <form action="./login-facebook" method="POST">
+        <div class="loginDiv"><button><img src="../images/facebookLoginBtn.png"></button></div>
+    </form><br/>
+    <form action="./login" method="POST">
+    <div class="loginDiv"><img src="../images/googleLoginBtn.png"></div>
+    </form><br/>
+</div>
 
 <script>
     document.getElementsByName('email')[0].focus();

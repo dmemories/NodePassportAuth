@@ -9,13 +9,4 @@ module.exports = function(passport) {
     }
 
     passport.use(new LocalStrategy({ usernameField: 'email' }, callbfunc))
-    passport.serializeUser((user, done) => { done(null, user.id) })
-    passport.deserializeUser(async (id, done) => {
-        try {
-            let user = await User.findById(id)
-            done(null, user)
-        } catch (err) {
-            done(err)
-        }
-    })
 }

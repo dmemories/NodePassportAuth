@@ -29,6 +29,12 @@ router.post('/login', (req, res, next) => {
     })(req, res, next)
 })
 
+router.post('/login-facebook', passport.authenticate('facebook'))
+router.get('/login-facebook/callback',
+    passport.authenticate('facebook', { failureRedirect: './login' }),
+    (req, res) => { res.redirect('/home') }
+);
+
 router.post('/logout', loginAuthen, (req, res) => {
     req.logOut()
     req.flash('succMsg', 'Logout Successfully !')

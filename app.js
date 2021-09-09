@@ -4,7 +4,9 @@ const session = require('express-session')
 const expressLayouts = require('express-ejs-layouts')
 const mongoose = require('mongoose')
 const passport = require('passport')
+const initPassport = require('./config/passport')
 const initPassportLocal = require('./config/passport-local')
+const initPassportFacebook = require('./config/passport-facebook')
 require('dotenv').config()
 
 // Initial
@@ -22,7 +24,9 @@ app.use(expressLayouts)
 app.set('view engine', 'ejs')
 app.use(passport.initialize())
 app.use(passport.session())
+initPassport(passport)
 initPassportLocal(passport)
+initPassportFacebook(passport)
 
 // Database
 try {
