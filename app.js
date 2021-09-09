@@ -7,6 +7,7 @@ const passport = require('passport')
 const initPassport = require('./config/passport')
 const initPassportLocal = require('./config/passport-local')
 const initPassportFacebook = require('./config/passport-facebook')
+const initPassportGoogle = require('./config/passport-google')
 require('dotenv').config()
 
 // Initial
@@ -27,6 +28,7 @@ app.use(passport.session())
 initPassport(passport)
 initPassportLocal(passport)
 initPassportFacebook(passport)
+initPassportGoogle(passport)
 
 // Database
 try {

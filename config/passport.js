@@ -3,7 +3,8 @@ const User = require('../models/User')
 module.exports = function(passport) {
     passport.serializeUser((user, done) => {
         switch (user.provider) {
-            case "facebook": done(null, { 
+            case "facebook":
+            case "google": done(null, { 
                 email: user._json.email
             })
         }
